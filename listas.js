@@ -22,10 +22,10 @@
 
 const LISTAS = [
   {
-    titulo: "Perfumes masculinos gourmand de MILIONÁRIO",
+    titulo: "Perfumes masculinos NOTURNOS",
     link: "https://meli.la/2JT1LqU",
     emoji: "🧔",
-    descricao: "PEFUMES EM CONTA QUE TE FAZEM CHEIRAR IGUAL RICO",
+    descricao: "PEFUMES EM CONTA QUE TE FAZEM CHEIRAR IGUAL RICO - LISTA 1",
     categoria: "Perfumes",
   },
   {
