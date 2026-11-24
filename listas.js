@@ -36,10 +36,10 @@ const LISTAS = [
     categoria: "Perfumes",
   },
   {
-    titulo: "Exemplo: Achados para casa",
-    link: "https://www.mercadolivre.com.br/",
-    emoji: "🏠",
-    descricao: "Troque este exemplo pela sua lista",
-    categoria: "Casa",
+    titulo: "Fones de Ouvido que DURAM e com preço JUSTO",
+    link: "https://meli.la/1rr2n2s",
+    emoji: "🎧",
+    descricao: "Uma lista de Fones de Ouvido que DURAM e com preço JUSTO para você",
+    categoria: "Fones de Ouvido",
   },
 ];
