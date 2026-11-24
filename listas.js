@@ -22,10 +22,10 @@
 
 const LISTAS = [
   {
-    titulo: "Exemplo: Perfumes masculinos até R$ 200",
-    link: "https://www.mercadolivre.com.br/",
+    titulo: "Perfumes masculinos gourmand de MILIONÁRIO",
+    link: "https://meli.la/2JT1LqU",
     emoji: "🧔",
-    descricao: "Troque este exemplo pela sua lista",
+    descricao: "PEFUMES EM CONTA QUE TE FAZEM CHEIRAR IGUAL RICO",
     categoria: "Perfumes",
   },
   {
