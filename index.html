@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Garimpo Mestre · Canal VIP de Achados</title>
+  <meta name="description" content="Os melhores achados de perfumes originais, garimpados todo dia e enviados no canal VIP do WhatsApp. 100% gratuito.">
+  <meta name="theme-color" content="#0b0d12">
+
+  <!-- Prévia do link no WhatsApp / Instagram -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Garimpo Mestre · Canal VIP de Achados">
+  <meta property="og:description" content="Perfumes originais com os melhores preços, garimpados todo dia. Entre no canal VIP — é grátis!">
+  <meta property="og:image" content="https://4ntich.github.io/GarimpoMestre/assets/og-garimpo.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/avatar.jpg" type="image/jpeg">
+  <link rel="apple-touch-icon" href="assets/avatar.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0b0d12;
+      --card: #14171f;
+      --line: #262a35;
+      --text: #f5f6f8;
+      --muted: #9aa0ad;
+      --gold-1: #ff6b6b;
+      --gold-2: #e3262b;
+      --gold-3: #a3121a;
+      --green: #25d366;
+      --green-2: #1fb457;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      min-height: 100dvh;
+      background:
+        radial-gradient(60rem 30rem at 50% -10%, rgba(227,38,43,.14), transparent 60%),
+        radial-gradient(40rem 30rem at 50% 110%, rgba(37,211,102,.08), transparent 60%),
+        var(--bg);
+      color: var(--text);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      display: flex;
+      justify-content: center;
+      padding: max(28px, env(safe-area-inset-top)) 20px max(28px, env(safe-area-inset-bottom));
+    }
+    .wrap { width: 100%; max-width: 440px; text-align: center; }
+
+    /* ---------- Avatar ---------- */
+    .avatar {
+      position: relative;
+      width: 148px; height: 148px;
+      margin: 8px auto 22px;
+      border-radius: 50%;
+      padding: 4px;
+      background: conic-gradient(from 210deg, var(--gold-1), var(--gold-3), #3a0b0e, var(--gold-2), var(--gold-1));
+      box-shadow: 0 0 60px rgba(227,38,43,.25);
+      animation: pop .6s cubic-bezier(.2,.9,.3,1.3) both;
+    }
+    .avatar__inner {
+      width: 100%; height: 100%;
+      border-radius: 50%;
+      overflow: hidden;
+      background: radial-gradient(circle at 50% 35%, #221012, #0f1016 70%);
+      border: 3px solid var(--bg);
+      display: grid; place-items: center;
+    }
+    .avatar__inner img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .avatar__inner svg { width: 64%; height: 64%; }
+    .avatar__dot {
+      position: absolute; right: 10px; bottom: 10px;
+      width: 22px; height: 22px; border-radius: 50%;
+      background: var(--green);
+      border: 4px solid var(--bg);
+    }
+    .avatar__dot::after {
+      content: ""; position: absolute; inset: -4px; border-radius: 50%;
+      border: 2px solid var(--green); animation: ping 1.8s ease-out infinite;
+    }
+
+    .handle {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 14px; font-weight: 600; color: var(--muted);
+      text-decoration: none; margin-bottom: 14px;
+    }
+    .handle svg { width: 16px; height: 16px; color: var(--gold-2); }
+
+    /* ---------- Título ---------- */
+    h1 {
+      font-family: Anton, Impact, "Arial Narrow", sans-serif;
+      font-weight: 400;
+      text-transform: uppercase;
+      line-height: .95;
+      letter-spacing: .5px;
+      font-size: clamp(44px, 14vw, 68px);
+      margin-bottom: 22px;
+    }
+    h1 .gold {
+      display: block;
+      background: linear-gradient(180deg, var(--gold-1), var(--gold-2) 60%, var(--gold-3));
+      -webkit-background-clip: text; background-clip: text;
+      color: transparent;
+    }
+
+    /* ---------- Selos ---------- */
+    .chips { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 22px; }
+    .chip {
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 9px 13px; border-radius: 999px; white-space: nowrap;
+      font-size: 12px; font-weight: 800; letter-spacing: .6px; text-transform: uppercase;
+      border: 1px solid var(--line); background: var(--card); color: var(--text);
+    }
+    .chip svg { width: 15px; height: 15px; }
+    .chip--gold { color: var(--gold-1); border-color: rgba(227,38,43,.45); background: rgba(227,38,43,.08); }
+
+    /* ---------- Botões ---------- */
+    .cta {
+      position: relative;
+      display: flex; align-items: center; justify-content: center; gap: 12px;
+      width: 100%;
+      padding: 20px 22px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #36e07a, var(--green-2));
+      color: #fff; text-decoration: none;
+      font-weight: 800; font-size: 17px; letter-spacing: .4px; text-transform: uppercase;
+      box-shadow: 0 10px 30px rgba(37,211,102,.35), inset 0 1px 0 rgba(255,255,255,.25);
+      transition: transform .15s ease, box-shadow .15s ease;
+      animation: pulse 2.4s ease-in-out infinite;
+      overflow: hidden;
+    }
+    .cta svg { width: 26px; height: 26px; flex: none; }
+    .cta::before {
+      content: ""; position: absolute; top: 0; bottom: 0; width: 40%; left: -60%;
+      background: linear-gradient(100deg, transparent, rgba(255,255,255,.35), transparent);
+      transform: skewX(-20deg);
+      animation: shine 3.2s ease-in-out infinite;
+    }
+    .cta:active { transform: scale(.97); }
+
+    .trust {
+      display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap;
+      margin: 16px 0 26px;
+      font-size: 13px; font-weight: 600; color: var(--muted);
+    }
+    .trust svg { width: 16px; height: 16px; color: var(--gold-2); }
+
+    .lead { color: #d6d9e0; font-size: 16px; line-height: 1.6; margin-bottom: 26px; }
+    .lead strong { color: #fff; }
+
+    /* ---------- Benefícios ---------- */
+    .perks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 26px; }
+    .perk {
+      background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+      padding: 14px 8px; font-size: 12.5px; font-weight: 600; line-height: 1.3; color: #d6d9e0;
+    }
+    .perk span { display: block; font-size: 24px; margin-bottom: 6px; }
+
+    .links { display: grid; gap: 10px; margin-bottom: 30px; }
+    .link {
+      display: flex; align-items: center; gap: 12px;
+      padding: 15px 18px; border-radius: 16px;
+      background: var(--card); border: 1px solid var(--line);
+      color: var(--text); text-decoration: none; font-weight: 700; font-size: 15px; text-align: left;
+      transition: border-color .15s ease, transform .15s ease;
+    }
+    .link:hover { border-color: rgba(227,38,43,.5); }
+    .link:active { transform: scale(.98); }
+    .link__icon {
+      width: 40px; height: 40px; flex: none; border-radius: 12px; display: grid; place-items: center;
+    }
+    .link__icon svg { width: 22px; height: 22px; }
+    .link__icon--ig { background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7); color: #fff; }
+    .link__icon--cat { background: rgba(227,38,43,.12); color: var(--gold-1); }
+    .link small { display: block; font-weight: 500; font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+    .link__arrow { margin-left: auto; color: var(--muted); width: 18px; height: 18px; }
+
+    footer { font-size: 12px; color: #6b7180; line-height: 1.6; }
+
+    @keyframes pop { from { transform: scale(.7); opacity: 0; } }
+    @keyframes ping { to { transform: scale(1.8); opacity: 0; } }
+    @keyframes pulse {
+      0%,100% { box-shadow: 0 10px 30px rgba(37,211,102,.35), 0 0 0 0 rgba(37,211,102,.45); }
+      50%     { box-shadow: 0 10px 30px rgba(37,211,102,.35), 0 0 0 12px rgba(37,211,102,0); }
+    }
+    @keyframes shine { 0%, 60% { left: -60%; } 100% { left: 130%; } }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+    @media (max-width: 360px) {
+      .cta { font-size: 15px; padding: 18px; }
+      .perks { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+
+    <!-- FOTO: salve sua foto em assets/avatar.jpg (quadrada) para trocar a imagem.
+         Já está com o logo do Garimpo Mestre. -->
+    <div class="avatar">
+      <div class="avatar__inner">
+        <img src="assets/avatar.jpg" alt="Logo Garimpo Mestre" onerror="this.remove()">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <defs>
+            <linearGradient id="gd" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#ffe29a"/><stop offset="1" stop-color="#c88a2a"/>
+            </linearGradient>
+          </defs>
+          <path d="M18 14h28l10 13-24 27L8 27z" fill="url(#gd)"/>
+          <path d="M8 27h48M18 14l6 13 8 27 8-27 6-13M24 27l8-13 8 13" fill="none" stroke="#0f1016" stroke-width="1.6" stroke-linejoin="round" opacity=".55"/>
+        </svg>
+      </div>
+      <span class="avatar__dot" title="Online agora"></span>
+    </div>
+
+    <a class="handle" href="https://instagram.com/garimpo.mestre" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2l2.4 1.6 2.9-.2 1 2.7 2.4 1.7-.8 2.8.8 2.8-2.4 1.7-1 2.7-2.9-.2L12 20l-2.4-1.6-2.9.2-1-2.7-2.4-1.7.8-2.8-.8-2.8 2.4-1.7 1-2.7 2.9.2Z"/><path d="m8.6 11 2.3 2.3 4.5-4.5" fill="none" stroke="#0b0d12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      @garimpo.mestre
+    </a>
+
+    <h1>Achados de perfumes<span class="gold">Originais!</span></h1>
+
+    <div class="chips">
+      <span class="chip chip--gold">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        100% gratuito
+      </span>
+      <span class="chip">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        Achados diários
+      </span>
+    </div>
+
+    <a class="cta" href="https://whatsapp.com/channel/0029Vb8wNb93WHTTN4qH791I" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.91-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.42.25-.69.25-1.29.18-1.41-.08-.13-.28-.2-.57-.35m-5.42 7.4h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89a11.82 11.82 0 0 0-3.48-8.41Z"/></svg>
+      Entrar no canal VIP
+    </a>
+
+    <p class="trust">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v5c0 4.5 3 8.3 7 10 4-1.7 7-5.5 7-10V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+      Canal oficial • Sem spam • Saia quando quiser
+    </p>
+
+    <p class="lead">
+      Eu garimpo os melhores preços de perfumes <strong>ORIGINAIS</strong> e mando tudo pra você no WhatsApp.
+      Só de <strong>lojas seguras e confiáveis!</strong>
+    </p>
+
+    <div class="perks">
+      <div class="perk"><span>🔎</span>Garimpo todo dia</div>
+      <div class="perk"><span>🏷️</span>Cupons e preço baixo</div>
+      <div class="perk"><span>🛡️</span>Só lojas confiáveis</div>
+    </div>
+
+    <nav class="links" aria-label="Outros links">
+      <a class="link" href="https://instagram.com/garimpo.mestre" target="_blank" rel="noopener">
+        <span class="link__icon link__icon--ig">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/></g><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor"/></svg>
+        </span>
+        <span>Siga no Instagram<small>@garimpo.mestre</small></span>
+        <svg class="link__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </nav>
+
+    <footer>
+      Garimpo Mestre · Achados de perfumes originais<br>
+      Os preços e cupons podem mudar a qualquer momento nas lojas.
+    </footer>
+  </main>
+</body>
+</html>
