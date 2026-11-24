@@ -36,10 +36,31 @@ const LISTAS = [
     categoria: "Perfumes",
   },
   {
-    titulo: "Fones de Ouvido que DURAM e com preço JUSTO",
+    titulo: "Fones de Ouvido",
     link: "https://meli.la/1rr2n2s",
     emoji: "🎧",
     descricao: "Uma lista de Fones de Ouvido que DURAM e com preço JUSTO para você",
     categoria: "Fones de Ouvido",
+  },
+  {
+    titulo: "Luzes NATALINAS",
+    link: "https://meli.la/2TqzYGG",
+    emoji: "✨",
+    descricao: "Uma lista de Luzes e Pisca-Piscas com preço JUSTO para você",
+    categoria: "Luzes Natalinas",
+  },
+  {
+    titulo: "Enfeites NATALINOS",
+    link: "https://meli.la/2jUQ6ox",
+    emoji: "🌟",
+    descricao: "Uma lista de Enfeites natalinos para você decorar sua árvore ou casa com preço JUSTO",
+    categoria: "Enfeites Natalinos",
+  },
+  {
+    titulo: "Árvores de NATAL ",
+    link: "https://meli.la/1QDN8tz",
+    emoji: "🎄",
+    descricao: "Uma árvores de Natal com um BELO DESCONTO para você aproveitar nesse Natal",
+    categoria: "Árvore de Natal",
   },
 ];
