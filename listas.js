@@ -36,11 +36,11 @@ const LISTAS = [
     categoria: "Perfumes",
   },
   {
-    titulo: "Fones de Ouvido",
-    link: "https://meli.la/1rr2n2s",
-    emoji: "🎧",
-    descricao: "Uma lista de Fones de Ouvido que DURAM e com preço JUSTO para você",
-    categoria: "Fones de Ouvido",
+    titulo: "Perfumes Femininos Árabes com PREÇO JUSTO que estão BOMBANDO",
+    link: "https://meli.la/2xEioN7",
+    emoji: "💁‍♀️",
+    descricao: "PERFUMES EM PROMOÇÃO QUE TE FARÃO SE SENTIR RICA - LISTA 1",
+    categoria: "Perfumes",
   },
   {
     titulo: "Luzes NATALINAS",
@@ -62,5 +62,12 @@ const LISTAS = [
     emoji: "🎄",
     descricao: "Uma árvores de Natal com um BELO DESCONTO para você aproveitar nesse Natal",
     categoria: "Árvore de Natal",
+  },
+  {
+    titulo: "Fones de Ouvido",
+    link: "https://meli.la/1rr2n2s",
+    emoji: "🎧",
+    descricao: "Uma lista de Fones de Ouvido que DURAM e com preço JUSTO para você",
+    categoria: "Fones de Ouvido",
   },
 ];
