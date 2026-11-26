@@ -25,14 +25,14 @@ const LISTAS = [
     titulo: "Perfumes masculinos NOTURNOS",
     link: "https://meli.la/2JT1LqU",
     emoji: "🧔",
-    descricao: "PEFUMES EM CONTA PARA USAR A NOITE QUE TE FAZEM CHEIRAR IGUAL RICO - LISTA 1",
+    descricao: "PERFUMES EM CONTA PARA USAR A NOITE QUE TE FAZEM CHEIRAR IGUAL RICO - LISTA 1",
     categoria: "Perfumes",
   },
   {
     titulo: "Perfumes masculinos de EMPRESARIO RICO",
     link: "https://meli.la/1qtTUze",
     emoji: "👔",
-    descricao: "PEFUMES EM CONTA QUE TE FAZEM CHEIRAR IGUAL EMPRESARIO RICO - LISTA 1",
+    descricao: "PERFUMES EM CONTA QUE TE FAZEM CHEIRAR IGUAL EMPRESARIO RICO - LISTA 1",
     categoria: "Perfumes",
   },
   {
